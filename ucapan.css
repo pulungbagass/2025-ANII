@@ -1,0 +1,189 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Agar halaman tetap bisa di-scroll */
+body {
+    margin: 0;
+    overflow: auto; /* Izinkan scroll secara vertikal maupun horizontal */
+    width: 100%;
+    height: auto; /* Tinggi halaman menyesuaikan isi */
+  }
+
+/* Alert Styling */
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, rgb(0, 183, 255), rgba(0, 183, 255, 0.822));
+    border: 2px solid rgba(0, 183, 255, 1);
+    box-shadow: 0 8px 20px rgba(0, 183, 255, 0.5);
+    border-radius: 15px;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    z-index: 1000;
+    animation: bounce-down 0.3s ease-out;
+    opacity: 1;
+  }
+  
+  /* Hidden State */
+  .hidden {
+    display: none;
+  }
+  
+  /* Button Styling */
+  .styled-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0, 183, 255, 0.9);
+    border: 2px solid rgba(107, 233, 227, 0.808) ;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.5s, box-shadow 0.3s;
+  }
+  
+  .styled-button:hover {
+    background-color: rgba(0, 160, 220, 1); /* Slightly darker blue */
+    box-shadow: 0 4px 15px rgba(0, 183, 255, 0.8);
+  }
+  
+  /* Animasi Bounce */
+  @keyframes bounce-down {
+    0% {
+      transform: translate(-50%, -70%);
+    }
+    50% {
+      transform: translate(-50%, -60%);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  /* Animasi Fade Out */
+  .fade-out {
+    animation: fade-out 0.5s ease-out forwards;
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+
+  /* Container untuk tombol play/pause */
+.play-pause-container {
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  /* Gaya tombol */
+  #play-pause-button {
+    background-color: rgba(0, 183, 255, 0.9); /* Warna biru neon */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 183, 255, 0.5); /* Neon glow */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Animasi berputar */
+  .spin {
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Ikon Play/Pause */
+  .material-icons {
+    font-size: 30px;
+  }
+  
+  /* Hover Effect */
+  #play-pause-button:hover {
+    transform: scale(1.1); /* Membesar saat hover */
+  }
+  
+  /* Gaya tambahan untuk animasi */
+  .play:hover {
+    box-shadow: 0 4px 15px rgba(0, 160, 220, 1);
+  }
+  
+
+
+  /* Styling untuk card */
+.card {
+    border: 3px solid rgba(0, 183, 255, 0.9); /* Border biru neon */
+    border-radius: 15px; /* Sudut yang melengkung */
+    background: linear-gradient(135deg, rgba(0, 183, 255, 0.1), rgba(0, 183, 255, 0.3));
+    margin: 40px ; /* Tengah secara horizontal dengan margin yang memadai */
+    padding: 20px; /* Ruang di dalam border */
+    box-shadow: 0 8px 20px rgba(0, 183, 255, 0.5); /* Efek bayangan */
+    font-family: 'Arial', sans-serif; /* Font yang mudah dibaca */
+    font-size: 18px;
+    text-align: justify; /* Justifikasi paragraf */
+    line-height: 1.6; /* Spasi antar baris untuk kenyamanan membaca */
+    max-width: 800px; /* Ukuran maksimal untuk layar besar */
+    }
+  
+    /* Responsive untuk perangkat besar (laptop) */
+  @media (min-width: 1024px) {
+    .card {
+      margin: 40px auto; /* Margin atas/bawah lebih besar untuk layar lebar */
+      padding: 30px; /* Tambah padding agar lebih leluasa */
+      font-size: 22px; /* Font sedikit lebih besar untuk laptop */
+    }
+  }
+  
+  /* Responsive untuk perangkat kecil (mobile) */
+  @media (max-width: 768px) {
+    .card {
+      margin: 30px 10px; /* Jarak lebih proporsional untuk perangkat kecil */
+      padding: 15px; /* Padding yang lebih kecil untuk fit pada layar kecil */
+      font-size: 16px; /* Font lebih kecil agar lebih pas di layar kecil */
+    }
+  }
+  
+  
+  .card h1 {
+    font-family: 'Pacifico', cursive; /* Font yang cocok untuk tema ulang tahun */
+    font-size: 36px; /* Ukuran font lebih besar untuk h1 */
+    color: rgba(0, 183, 255, 1); /* Warna biru neon */
+    text-align: center; /* Posisi judul di tengah */
+    margin-bottom: 20px; /* Jarak bawah dari h1 */
+  }
+  
+
+  .card p {
+  font-family: 'Roboto', sans-serif;
+  color: #333; /* Warna gelap untuk keterbacaan */
+  line-height: 1.6; /* Spasi antar baris untuk kenyamanan membaca */
+  text-align: justify; /* Justifikasi teks */
+}
+
+  
